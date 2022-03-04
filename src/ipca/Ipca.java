@@ -5,6 +5,8 @@
  */
 package ipca;
 
+import ipca.sites.DicionarioFinanceiro;
+import ipca.sites.Ibge;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
@@ -19,9 +21,9 @@ public class Ipca {
      */
     public static void main(String[] args) {
         Ibge ibge = new Ibge();
-        MelhorCambio melhorCambio = new MelhorCambio();
+        DicionarioFinanceiro melhorCambio = new DicionarioFinanceiro();
         
-        //System.out.println("IPCA IBGE: " + ibge.getIPCA());
-        System.out.println("IPCA Melhor Cambio: " + melhorCambio.getIPCA());
+        System.out.println("IPCA IBGE: " + ibge.getIPCA());
+        System.out.println("IPCA Dicionario Financeiro: " + melhorCambio.getIPCA());
     }
 }
